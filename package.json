@@ -4,7 +4,7 @@
   "description": "patch the source code of a running program",
   "main": "index.js",
   "bin": {
-    "live-patch": "cmd.js"
+    "live-patch": "bin/cmd.js"
   },
   "directories": {
     "example": "example",
