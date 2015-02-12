@@ -1,0 +1,48 @@
+{
+  "name": "live-patch",
+  "version": "1.0.0",
+  "description": "patch the source code of a running program",
+  "main": "index.js",
+  "bin": {
+    "live-patch": "cmd.js"
+  },
+  "directories": {
+    "example": "example",
+    "test": "test"
+  },
+  "dependencies": {
+    "falafel": "^1.0.0",
+    "gaze": "^0.5.1",
+    "has": "^1.0.0",
+    "minimist": "^1.1.0",
+    "patcher": "^0.0.6",
+    "scoper": "^1.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "tape test/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/substack/live-patch.git"
+  },
+  "keywords": [
+    "live",
+    "code",
+    "edit",
+    "patch",
+    "source",
+    "reload",
+    "magic",
+    "gimmick",
+    "fragile",
+    "trick",
+    "cardboard"
+  ],
+  "author": "substack",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/substack/live-patch/issues"
+  },
+  "homepage": "https://github.com/substack/live-patch"
+}

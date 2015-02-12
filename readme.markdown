@@ -1,6 +1,6 @@
 # live-patch
 
-live patch a running program
+patch the source code of a running program
 
 Currently this module is nothing more than cheap parlor tricks.
 
