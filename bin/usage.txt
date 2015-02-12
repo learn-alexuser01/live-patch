@@ -1,0 +1,7 @@
+live-patch {OPTIONS} FILE [ARGS...]
+
+  Run FILE with node, watching for changes.
+  When FILE changes, the new source is patched in.
+
+  -h --help  Show this message.
+
