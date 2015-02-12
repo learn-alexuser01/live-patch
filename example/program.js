@@ -1,6 +1,6 @@
 var x = 1;
 
 setInterval(function () {
-    x += 100;
+    x ++;
     console.log(x);
 }, 1000);
