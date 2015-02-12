@@ -1,20 +1,17 @@
 var fs = require('fs');
-var patch = require('../')();
 var gaze = require('gaze');
+var file = __dirname + '/program.js';
 
-gaze('program.js', function (err, w) {
-    w.on('changed', function (p) {
-        read(function (err, src) {
-            if (err) return console.error(err);
-            patch.update(src);
-        });
+var patch = require('../')();
+
+gaze(file, function (err, w) {
+    w.on('changed', function (p) { read() });
+});
+read();
+
+function read () {
+    fs.readFile(file, 'utf8', function (err, src) {
+        if (err) return console.error(err);
+        patch.update(src);
     });
-});
-read(function (err, src) {
-    if (err) return console.error(err);
-    patch.update(src);
-});
-
-function read (cb) {
-    fs.readFile('program.js', 'utf8', cb)
 }

@@ -6,15 +6,10 @@ module.exports = Patch;
 function Patch (src) {
     if (!(this instanceof Patch)) return new Patch(src);
     if (src) this.update(src);
-    this.names = {
-        scope: rname(),
-        function: rname(),
-        literal: rname()
-    };
 }
 
 Patch.prototype.update = function (src) {
-    var nsrc = scoper(src, { names: this.names });
+    var nsrc = scoper(src);
     var c = Function('return ' + nsrc)();
     
     if (this.context) {
@@ -29,7 +24,3 @@ Patch.prototype.update = function (src) {
         c.run();
     }
 };
-
-function rname () {
-    return '__' + (Math.pow(16, 8) * Math.random()).toString(16);
-}
